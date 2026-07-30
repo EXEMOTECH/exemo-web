@@ -3,61 +3,286 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXEMO Tech</title>
-  <meta name="description" content="EXEMO Tech: inteligencia artificial aplicada a la optimización energética.">
+  <title>EXEMO Tech | Inteligencia aplicada a la energía</title>
+  <meta name="description" content="EXEMO Tech optimiza contratos, consumos y decisiones energéticas mediante análisis avanzado e inteligencia artificial.">
+  <meta name="theme-color" content="#05070d">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b1220;
-      color: white;
-      text-align: center;
-    }
-
-    main {
-      max-width: 900px;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-      font-size: clamp(3rem, 10vw, 7rem);
-      letter-spacing: -0.06em;
-    }
-
-    h1 span {
-      color: #f97316;
-    }
-
-    p {
-      color: #cbd5e1;
-      font-size: clamp(1.1rem, 3vw, 1.6rem);
-      line-height: 1.5;
-    }
-  </style>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class="background-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="EXEMO Tech, inicio">
+      <img src="assets/logo-dark-transparent.png" alt="EXEMO Tech">
+    </a>
+
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-navigation">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Abrir menú</span>
+    </button>
+
+    <nav id="main-navigation" class="main-nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#sectores">Sectores</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="button button-small header-cta" href="#contacto">Solicitar estudio</a>
+  </header>
+
   <main>
-    <h1>EXEMO<span>TECH</span></h1>
-    <p>Inteligencia artificial aplicada a la optimización energética.</p>
+    <section id="inicio" class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Energía · Tecnología · Inteligencia artificial</p>
+
+        <h1>
+          Decisiones energéticas
+          <strong>más inteligentes.</strong>
+        </h1>
+
+        <p class="hero-description">
+          Analizamos contratos, consumos y mercados para ayudar a empresas,
+          comunidades y grandes consumidores a reducir costes y controlar el riesgo.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="#contacto">Solicitar estudio gratuito</a>
+          <a class="button button-secondary" href="#tecnologia">Cómo trabajamos</a>
+        </div>
+
+        <div class="trust-strip" aria-label="Principales capacidades">
+          <span>Optimización continua</span>
+          <span>Análisis multicomercializadora</span>
+          <span>Modelos de riesgo</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Panel conceptual de inteligencia energética">
+        <div class="orbital-card">
+          <div class="orbital-ring ring-one"></div>
+          <div class="orbital-ring ring-two"></div>
+          <img class="hero-symbol" src="assets/exemo-symbol.png" alt="" aria-hidden="true">
+        </div>
+
+        <div class="data-card data-card-top">
+          <span class="data-label">Mercado</span>
+          <strong>Monitorización activa</strong>
+          <span class="data-status"><i></i> Actualizado</span>
+        </div>
+
+        <div class="data-card data-card-bottom">
+          <span class="data-label">Optimización</span>
+          <strong>Electricidad + Gas</strong>
+          <div class="mini-bars" aria-hidden="true">
+            <span style="--height: 42%"></span>
+            <span style="--height: 68%"></span>
+            <span style="--height: 52%"></span>
+            <span style="--height: 86%"></span>
+            <span style="--height: 72%"></span>
+          </div>
+        </div>
+      </div>
+    
+</section>
+
+    <section class="proof-strip" aria-label="Capacidades de EXEMO Tech">
+      <div class="proof-item reveal">
+        <strong data-counter="40">0</strong><span>+</span>
+        <p>Acuerdos y alternativas de mercado</p>
+      </div>
+      <div class="proof-item reveal">
+        <strong>24/7</strong>
+        <p>Seguimiento y análisis energético</p>
+      </div>
+      <div class="proof-item reveal">
+        <strong>360º</strong>
+        <p>Electricidad, gas y tecnología</p>
+      </div>
+      <div class="proof-item reveal">
+        <strong>IA</strong>
+        <p>Apoyo a decisiones complejas</p>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> Qué hacemos</p>
+        <h2>Control energético de principio a fin.</h2>
+        <p>
+          Combinamos conocimiento del mercado, acuerdos comerciales y herramientas
+          tecnológicas para construir una estrategia adaptada a cada cliente.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-number">01</div>
+          <h3>Electricidad</h3>
+          <p>Revisión de tarifas, potencia, curvas de consumo y modalidades fijas, indexadas o mixtas.</p>
+          <a href="#contacto">Analizar suministro <span>→</span></a>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-number">02</div>
+          <h3>Gas</h3>
+          <p>Análisis de contratos, peajes, consumos y estrategias de cobertura vinculadas al mercado.</p>
+          <a href="#contacto">Revisar contrato <span>→</span></a>
+        </article>
+
+        <article class="service-card service-card-featured reveal">
+          <div class="service-number">03</div>
+          <h3>Inteligencia artificial</h3>
+          <p>Modelos que organizan datos, comparan escenarios y ayudan a anticipar riesgos y oportunidades.</p>
+          <a href="#tecnologia">Descubrir tecnología <span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="tecnologia" class="section technology-section">
+      <div class="technology-panel reveal">
+        <div class="technology-copy">
+          <p class="eyebrow"><span></span> Tecnología EXEMO</p>
+          <h2>Convertimos datos complejos en decisiones claras.</h2>
+          <p>
+            Integramos información contractual, consumo histórico, mercados energéticos
+            y variables de riesgo para comparar alternativas de forma objetiva.
+          </p>
+
+          <ul class="feature-list">
+            <li><span>01</span> Lectura y normalización de datos energéticos</li>
+            <li><span>02</span> Simulación de escenarios y costes</li>
+            <li><span>03</span> Seguimiento de mercado y riesgo</li>
+            <li><span>04</span> Recomendaciones comprensibles y auditables</li>
+          </ul>
+        </div>
+
+        <div class="technology-dashboard" aria-hidden="true">
+          <div class="dashboard-header">
+            <span>EXEMO Intelligence</span>
+            <i></i>
+          </div>
+          <div class="dashboard-chart">
+            <span class="chart-line"></span>
+            <div class="chart-point point-one"></div>
+            <div class="chart-point point-two"></div>
+            <div class="chart-point point-three"></div>
+          </div>
+          <div class="dashboard-metrics">
+            <div><small>Contratos</small><strong>Analizados</strong></div>
+            <div><small>Escenarios</small><strong>Comparados</strong></div>
+            <div><small>Riesgo</small><strong>Monitorizado</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectores" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> Especialización</p>
+        <h2>Soluciones adaptadas a cada tipo de consumidor.</h2>
+      </div>
+
+      <div class="sectors-grid">
+        <article class="sector-card reveal"><span>01</span><h3>Empresas</h3><p>Control de costes y estrategia contractual.</p></article>
+        <article class="sector-card reveal"><span>02</span><h3>Comunidades</h3><p>Optimización de suministros y potencias.</p></article>
+        <article class="sector-card reveal"><span>03</span><h3>Restauración</h3><p>Análisis multipunto y perfiles horarios.</p></article>
+        <article class="sector-card reveal"><span>04</span><h3>Gran consumo</h3><p>Compras, cierres y seguimiento de mercado.</p></article>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact-section">
+      <div class="contact-layout">
+        <div class="contact-copy reveal">
+          <p class="eyebrow"><span></span> Estudio inicial</p>
+          <h2>Cuéntanos dónde quieres mejorar.</h2>
+          <p>
+            Revisamos tu situación energética y te indicamos qué información necesitamos
+            para preparar un análisis inicial.
+          </p>
+
+          <div class="contact-details">
+            <a href="mailto:info@exemo.es">
+              <small>Correo</small>
+              <strong>info@exemo.es</strong>
+            </a>
+            <a href="tel:+34600808999">
+              <small>Teléfono</small>
+              <strong>600 808 999</strong>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-row">
+            <label>
+              Nombre
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              Empresa
+              <input type="text" name="company" autocomplete="organization">
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Correo electrónico
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>
+              Teléfono
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+          </div>
+
+          <label>
+            ¿Qué necesitas analizar?
+            <select name="service" required>
+              <option value="">Selecciona una opción</option>
+              <option>Electricidad</option>
+              <option>Gas</option>
+              <option>Electricidad y gas</option>
+              <option>Herramientas de IA y software</option>
+              <option>Otro</option>
+            </select>
+          </label>
+
+          <label>
+            Mensaje
+            <textarea name="message" rows="5" placeholder="Número de suministros, tipo de cliente o cualquier información útil."></textarea>
+          </label>
+
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>Acepto que EXEMO Tech utilice estos datos para responder a mi solicitud.</span>
+          </label>
+
+          <button class="button" type="submit">Preparar solicitud</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <img src="assets/logo-dark-transparent.png" alt="EXEMO Tech">
+    <p>Inteligencia aplicada a la energía.</p>
+    <div>
+      <a href="#">Aviso legal</a>
+      <a href="#">Privacidad</a>
+      <span>© <span id="current-year"></span> EXEMO Tech S.L.</span>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
-Pulsa arriba a la derecha “Commit changes…”.
-En la ventana que salga, deja seleccionado:
-Commit directly to the main branch
-Mensaje: Add initial website
-Pulsa de nuevo “Commit changes”.
-
-Después Cloudflare detectará el cambio automáticamente e intentará publicar la web otra vez. En cuanto lo hagas, vuelve a Cloudflare y abre Deployments.
