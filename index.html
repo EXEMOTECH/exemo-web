@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 
 <body>
@@ -67,28 +67,36 @@
       </div>
 
       <div class="hero-visual reveal" aria-label="Panel conceptual de inteligencia energética">
-        <div class="orbital-card">
-          <div class="orbital-ring ring-one"></div>
-          <div class="orbital-ring ring-two"></div>
-          <img class="hero-symbol" src="assets/exemo-symbol.png" alt="" aria-hidden="true">
-        </div>
-
-        <div class="data-card data-card-top">
-          <span class="data-label">Mercado</span>
-          <strong>Monitorización activa</strong>
-          <span class="data-status"><i></i> Actualizado</span>
-        </div>
-
-        <div class="data-card data-card-bottom">
-          <span class="data-label">Optimización</span>
-          <strong>Electricidad + Gas</strong>
-          <div class="mini-bars" aria-hidden="true">
-            <span style="--height: 42%"></span>
-            <span style="--height: 68%"></span>
-            <span style="--height: 52%"></span>
-            <span style="--height: 86%"></span>
-            <span style="--height: 72%"></span>
+        <div class="orbital-stage">
+          <div class="orbital-card">
+            <div class="orbital-ring ring-one"></div>
+            <div class="orbital-ring ring-two"></div>
+            <div class="orbit-spark spark-one"></div>
+            <div class="orbit-spark spark-two"></div>
+            <img class="hero-symbol" src="assets/exemo-symbol.png" alt="" aria-hidden="true">
           </div>
+        </div>
+
+        <div class="hero-data-grid">
+          <article class="data-card data-card-optimization">
+            <span class="data-label">Optimización</span>
+            <strong>Electricidad + Gas</strong>
+            <div class="mini-bars" aria-hidden="true">
+              <span style="--height: 34%"></span>
+              <span style="--height: 52%"></span>
+              <span style="--height: 68%"></span>
+              <span style="--height: 84%"></span>
+              <span style="--height: 100%"></span>
+            </div>
+            <p>Detectamos oportunidades, reducimos costes y optimizamos cada suministro.</p>
+          </article>
+
+          <article class="data-card data-card-market">
+            <span class="data-label">Mercado</span>
+            <strong>Monitorización activa</strong>
+            <div class="market-chart" aria-hidden="true"><span></span></div>
+            <p>Seguimiento continuo del mercado para anticipar cambios y proteger tu energía.</p>
+          </article>
         </div>
       </div>
     
@@ -283,6 +291,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=7"></script>
 </body>
 </html>

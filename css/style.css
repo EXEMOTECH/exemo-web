@@ -1174,3 +1174,233 @@ h1 strong {
     padding: 21px 16px;
   }
 }
+
+/* ===== EXEMO v7 — portada compacta y responsive ===== */
+:root {
+  --max-width: 1420px;
+}
+
+.site-header {
+  top: 14px;
+  width: min(calc(100% - 28px), var(--max-width));
+  min-height: 64px;
+  padding: 8px 12px 8px 18px;
+}
+
+.brand img { width: 118px; max-height: 44px; }
+.main-nav { gap: clamp(22px, 3vw, 42px); }
+
+.hero {
+  grid-template-columns: minmax(0, .86fr) minmax(520px, 1.14fr);
+  align-items: start;
+  gap: clamp(32px, 4vw, 72px);
+  width: min(calc(100% - 32px), var(--max-width));
+  min-height: auto;
+  padding: 112px 0 22px;
+}
+
+.hero-copy { padding-top: clamp(38px, 6vh, 74px); }
+.hero .eyebrow { margin-bottom: 16px; }
+
+h1 {
+  max-width: 690px;
+  margin-bottom: 20px;
+  font-size: clamp(3.15rem, 5.2vw, 5.35rem);
+  line-height: .96;
+}
+
+.hero-description {
+  max-width: 600px;
+  font-size: clamp(1rem, 1.25vw, 1.16rem);
+  line-height: 1.65;
+}
+
+.hero-actions { margin-top: 27px; }
+.trust-strip { margin-top: 28px; gap: 10px 22px; }
+
+.hero-visual {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  min-height: 0;
+  padding-top: 8px;
+}
+
+.orbital-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 330px;
+}
+
+.orbital-stage::after {
+  content: "";
+  position: absolute;
+  left: 15%; right: 15%; bottom: 2px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(65,191,255,.95), transparent);
+  box-shadow: 0 0 24px rgba(26,151,240,.85);
+}
+
+.orbital-card {
+  width: min(335px, 52vw);
+  border: 0;
+  background: radial-gradient(circle, rgba(28,152,238,.12), transparent 64%);
+  box-shadow: none;
+  perspective: 1000px;
+}
+
+.orbital-card img {
+  width: 69%;
+  transform-style: preserve-3d;
+  animation: exemoLogoIntro 2.8s cubic-bezier(.2,.7,.2,1) both;
+  filter: drop-shadow(0 0 26px rgba(48,174,255,.35));
+}
+
+.orbital-ring { opacity: .8; }
+.ring-one { width: 132%; height: 54%; }
+.ring-two { width: 62%; height: 130%; }
+
+.orbit-spark {
+  position: absolute;
+  z-index: 3;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #85dbff;
+  box-shadow: 0 0 15px #168fe9;
+}
+.spark-one { top: 12%; right: 12%; }
+.spark-two { bottom: 18%; left: 9%; }
+
+.hero-data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
+.data-card {
+  position: relative;
+  inset: auto;
+  width: auto;
+  min-height: 186px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+
+.data-card p {
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+
+.data-card-optimization .data-label { color: #49bfff; }
+.data-card-market .data-label { color: #42dda8; }
+.data-card strong { font-size: 1rem; }
+.mini-bars { height: 64px; margin-top: 12px; gap: 10px; }
+.mini-bars span { width: clamp(14px, 2vw, 22px); }
+
+.market-chart {
+  position: relative;
+  height: 68px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(84,225,177,.2);
+}
+.market-chart::before {
+  content: "";
+  position: absolute;
+  inset: 12px 0 8px;
+  background: linear-gradient(155deg, transparent 0 12%, rgba(57,224,172,.85) 12.8% 13.8%, transparent 14.5% 24%, rgba(57,224,172,.85) 25% 26%, transparent 27% 38%, rgba(57,224,172,.85) 39% 40%, transparent 41% 54%, rgba(57,224,172,.85) 55% 56%, transparent 57% 70%, rgba(57,224,172,.85) 71% 72%, transparent 73% 86%, rgba(57,224,172,.85) 87% 88%, transparent 89%);
+  transform: skewY(-9deg);
+  filter: drop-shadow(0 0 8px rgba(57,224,172,.65));
+}
+.market-chart span {
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #42dda8;
+  box-shadow: 0 0 12px #42dda8;
+}
+
+.proof-strip {
+  width: min(calc(100% - 32px), var(--max-width));
+  margin: 0 auto 24px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(7,15,25,.78);
+}
+.proof-item {
+  min-width: 0;
+  padding: 24px clamp(20px, 2.5vw, 34px);
+  border-right: 1px solid var(--border);
+}
+.proof-item:last-child { border-right: 0; }
+.proof-item strong { font-size: clamp(2rem, 3.2vw, 3.1rem); line-height: 1; color: #7bd0ff; }
+.proof-item > span { color: #7bd0ff; font-size: 1.5rem; font-weight: 800; }
+.proof-item p { margin: 10px 0 0; color: var(--text-secondary); font-size: .82rem; line-height: 1.45; }
+
+@keyframes exemoLogoIntro {
+  0% { opacity: 0; transform: scale(.76) rotateY(-235deg) rotateZ(-7deg); }
+  42% { opacity: 1; transform: scale(1.04) rotateY(-70deg) rotateZ(2deg); }
+  72% { transform: scale(.98) rotateY(10deg) rotateZ(-1deg); }
+  88% { transform: scale(1.015) rotateY(-3deg); }
+  100% { opacity: 1; transform: scale(1) rotateY(0) rotateZ(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbital-card img { animation: none; }
+}
+
+@media (max-width: 1180px) {
+  .hero {
+    grid-template-columns: minmax(0, .95fr) minmax(460px, 1.05fr);
+    gap: 30px;
+  }
+  h1 { font-size: clamp(3rem, 5.6vw, 4.65rem); }
+  .orbital-stage { min-height: 300px; }
+  .orbital-card { width: min(300px, 48vw); }
+  .proof-strip { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .proof-item:nth-child(2) { border-right: 0; }
+  .proof-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 132px;
+  }
+  .hero-copy { padding-top: 0; text-align: center; }
+  .hero-visual { width: min(760px, 100%); margin: 0 auto; }
+  .orbital-stage { min-height: 320px; }
+  .orbital-card { width: min(320px, 65vw); }
+  .hero-data-grid { max-width: 760px; }
+}
+
+@media (max-width: 680px) {
+  .site-header { width: calc(100% - 20px); top: 10px; }
+  .brand img { width: 92px; }
+  .header-cta { display: none; }
+  .hero { width: calc(100% - 24px); padding-top: 112px; }
+  h1 { font-size: clamp(2.65rem, 13vw, 4rem); }
+  .hero-description { font-size: 1rem; }
+  .hero-actions { display: grid; grid-template-columns: 1fr; }
+  .button { width: 100%; }
+  .trust-strip { gap: 9px 14px; font-size: .75rem; }
+  .orbital-stage { min-height: 265px; }
+  .orbital-card { width: min(255px, 76vw); }
+  .hero-data-grid { grid-template-columns: 1fr; }
+  .data-card { min-height: 164px; }
+  .proof-strip { grid-template-columns: 1fr; }
+  .proof-item { border-right: 0; border-bottom: 1px solid var(--border); }
+  .proof-item:last-child { border-bottom: 0; }
+}
