@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="stylesheet" href="css/style.css?v=9">
 </head>
 
 <body>
@@ -31,10 +31,11 @@
       <a href="#servicios">Servicios</a>
       <a href="#tecnologia">Tecnología</a>
       <a href="#sectores">Sectores</a>
+      <a href="#factura">Analizar factura</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
-    <a class="button button-small header-cta" href="#contacto">Solicitar estudio</a>
+    <a class="button button-small header-cta" href="#factura">Subir factura</a>
   </header>
 
   <main>
@@ -70,7 +71,7 @@
         <div class="orbital-card">
           <div class="orbital-ring ring-one"></div>
           <div class="orbital-ring ring-two"></div>
-          <img class="hero-symbol" src="assets/logo-dark-transparent.png" alt="" aria-hidden="true">
+          <img class="hero-symbol" src="assets/exemo-symbol.png" alt="" aria-hidden="true">
         </div>
 
         <div class="data-card data-card-top">
@@ -111,14 +112,6 @@
         <strong>IA</strong>
         <p>Apoyo a decisiones complejas</p>
       </div>
-    </section>
-
-
-    <section class="benefit-strip" aria-label="Ventajas de EXEMO Tech">
-      <article><span class="benefit-icon">⚡</span><div><strong>Ahorro garantizado</strong><p>Reducimos costes sin comprometer la calidad del suministro.</p></div></article>
-      <article><span class="benefit-icon">◈</span><div><strong>Inteligencia artificial</strong><p>Tecnología propia para analizar, predecir y optimizar.</p></div></article>
-      <article><span class="benefit-icon">↗</span><div><strong>Control y transparencia</strong><p>Datos claros, informes comprensibles y decisiones seguras.</p></div></article>
-      <article><span class="benefit-icon">◉</span><div><strong>Acompañamiento</strong><p>Te ayudamos en todo el proceso, de principio a fin.</p></div></article>
     </section>
 
     <section id="servicios" class="section">
@@ -207,6 +200,67 @@
       </div>
     </section>
 
+
+    <section id="factura" class="section invoice-section">
+      <div class="invoice-layout">
+        <div class="invoice-copy reveal">
+          <p class="eyebrow"><span></span> Análisis documental</p>
+          <h2>Sube una factura y prepara su análisis.</h2>
+          <p>
+            Selecciona una factura desde tu ordenador, móvil o tablet. Esta primera versión
+            comprueba el archivo y muestra una vista previa, dejando preparada la conexión
+            con el OCR y la base de datos de EXEMO.
+          </p>
+
+          <div class="invoice-features" aria-label="Características del sistema de carga">
+            <div><strong>Formatos</strong><span>PDF, JPG, PNG, BMP, TIFF y WEBP</span></div>
+            <div><strong>Tamaño máximo</strong><span>15 MB por documento</span></div>
+            <div><strong>Privacidad</strong><span>No se envía nada sin confirmación</span></div>
+          </div>
+        </div>
+
+        <div class="invoice-uploader reveal" id="invoice-uploader">
+          <input
+            id="invoice-file"
+            class="sr-only"
+            type="file"
+            accept=".pdf,.jpg,.jpeg,.png,.bmp,.tif,.tiff,.webp,application/pdf,image/jpeg,image/png,image/bmp,image/tiff,image/webp"
+          >
+
+          <label class="drop-zone" id="invoice-drop-zone" for="invoice-file" tabindex="0">
+            <span class="upload-icon" aria-hidden="true">⇧</span>
+            <strong>Selecciona o arrastra tu factura</strong>
+            <span>En móvil podrás elegir la cámara, la galería o tus archivos.</span>
+            <span class="upload-button">Abrir explorador</span>
+          </label>
+
+          <div class="file-feedback" id="file-feedback" aria-live="polite"></div>
+
+          <div class="invoice-preview" id="invoice-preview" hidden>
+            <div class="preview-header">
+              <div>
+                <small>Documento seleccionado</small>
+                <strong id="invoice-file-name"></strong>
+                <span id="invoice-file-meta"></span>
+              </div>
+              <button class="remove-file" id="remove-invoice" type="button" aria-label="Eliminar factura seleccionada">×</button>
+            </div>
+            <div class="preview-frame" id="invoice-preview-frame"></div>
+          </div>
+
+          <label class="consent invoice-consent">
+            <input id="invoice-consent" type="checkbox">
+            <span>Confirmo que estoy autorizado para facilitar esta factura para su análisis.</span>
+          </label>
+
+          <button class="button invoice-process" id="process-invoice" type="button" disabled>
+            Preparar análisis OCR
+          </button>
+          <p class="ocr-status" id="ocr-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto" class="section contact-section">
       <div class="contact-layout">
         <div class="contact-copy reveal">
@@ -285,12 +339,13 @@
     <img src="assets/logo-dark-transparent.png" alt="EXEMO Tech">
     <p>Inteligencia aplicada a la energía.</p>
     <div>
-      <a href="#">Aviso legal</a>
-      <a href="#">Privacidad</a>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
       <span>© <span id="current-year"></span> EXEMO Tech S.L.</span>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+ <script src="js/script.js?v=16"></script>
 </body>
 </html>

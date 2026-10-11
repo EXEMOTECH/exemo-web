@@ -1,0 +1,5 @@
+EXEMO v15 - Particular temporalmente desactivado
+
+La opción "No, particular" queda visible pero deshabilitada. "Sí, empresa" queda seleccionada por defecto.
+
+Sustituye el script.js de exemo-web/js/script.js y recarga con Ctrl+F5.
